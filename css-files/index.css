@@ -21,7 +21,6 @@ body{
 }
 .header a{
   color: white;
-  display: inline block;
   padding: 0.75em 1em;
   text-decoration: none;
   background-color: grey;
@@ -82,7 +81,7 @@ h2{
 a{
   margin-top: 20px;
   font-size: 1.3em;
-  font-family: "source sans pro", sans serif;
+  font-family: "source sans pro", sans-serif
 }
 .web-goal{
   display: inline-block;
@@ -122,14 +121,13 @@ a{
   width: 100%;
 }
 .gallery img{
-  width: 385px;
+  width: 383px;
   height: 300px;
   transition: 1s;
   padding: 15px;
 }
 .gallery img:hover{
   filter: grayscale(100%);
-  transition:(1.1); 
 }
 .photo_name{
   width: 100%;
@@ -160,7 +158,7 @@ a{
 }
 .maps{
   margin: 10px;
-  padding: 20px, 0;
+  padding: 20px 0;
   border: 1px solid grey;
   display: block;
 }
