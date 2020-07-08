@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Experts Agency</title>
+  <link rel="stylesheet" href="css-files/index.css">
+</head>
+<body>
+  <nav class="header">
+    <ul>
+      <li><a class="current" href="index.html">Home</a></li>
+      <li><a href="#Destinations">Destinations</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+  <header id="Home">
+    <div class="hero-section">
+      <a href="#Home"><img src="images/canvas_navs.png" class="logo" alt="Website Logo"></a>
+      <h1>Connect to the <span>World</span> With Adventures</h1>
+      <h2>Explore a World of Travel and Save More</h2>
+      <a class="web-goal" href="register.html">Sign Up Here!</a>
+    </div>
+  </header>
+  <div id="Destinations">
+    <h2>Destination Gallery</h2>
+  </div>
+  <div class="gallery">
+    <div>
+      <img src="images/des1_small.jpg" alt="South America">
+      <div class="photo_name">South America</div>
+    </div>
+    <div>
+      <img src="images/des2_small.jpeg" alt="Africa">
+      <div class="photo_name">Africa</div>
+    </div>
+    <div>
+      <img src="images/des3_small.jpg" alt="North America">
+      <div class="photo_name">North America</div>
+    </div>
+    <div>
+      <img src="images/des4_small.jpg" alt="Asia">
+      <div class="photo_name">Asia</div>
+    </div>
+    <div>
+      <img src="images/des5_small.jpg" alt="Europe">
+      <div class="photo_name">Europe</div>
+    </div>
+    <div>
+      <img src="images/des6_small.jpg" alt="Australia">
+      <div class="photo_name">Australia</div>
+    </div>
+  </div>
+  <div id="contact">
+    <form id="information" action="https://formspree.io/xgennzer" method="post">
+      <h2>Contact Us Now </h2>
+      <h4>Send us a message and a travel expert will be happy to reach you</h4>
+      <div>
+        <label><span>Name *</span>
+          <input placeholder="Enter full name" type="text" required>
+        </label>
+      </div>
+      <div>
+        <label><span>Email *</span>
+          <input placeholder="Enter your email address" type="email" required>
+        </label>
+      </div>
+      <div>
+        <label><span>Phone *</span>
+          <input placeholder="Enter your phone number including country and area code" type="tel" required>
+        </label>
+      </div>
+      <div>
+        <label><span>Continent of travel (if known)</span>
+          <select id="continent" name="Continent">
+            <option value="select">Select a continent</option>
+            <option value="australia">Australia</option>
+            <option value="north_america">North America</option>
+            <option value="south_america">South America</option>
+            <option value="Asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="africa">Africa</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label><span>Additional Information</span>
+          <textarea placeholder="What do you want us to know about your upcoming trip?" required>
+          </textarea>
+        </label>
+      </div>
+      <div>
+        <button name="submit" type="submit" id="contact-submit">Submit</button>
+      </div>
+    </form>
+    <div class="maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20066.63207975867!2d-114.09553766214036!3d51.04701247956212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe472f607e7%3A0xff059970e78f52c1!2sManpower!5e0!3m2!1sen!2sca!4v1593930164715!5m2!1sen!2sca"width="500" height="750"></iframe>
+    </div>
+  </div>
+  <footer>&copy 2020 Titilope Raheem</footer>    
+</body>
+</html>
