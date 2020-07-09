@@ -1,23 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap');
 body{
   margin: 0;
-  width: 100%;
+  /*width: 100%;*/
 }
-.header{
+/* define navbar layout*/
+.header ul{
   margin: 0;
-  width: 100%;
   background:rgb(126, 126, 245) ;
-  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.header ul{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  padding: 16px;
+  color: white;
 }
 .header li{
-  display: inline-block;
+  list-style-type: none;
+  margin-left: 5px;
+  padding-right: 4px;
 }
 .header a{
   color: white;
@@ -38,8 +37,21 @@ body{
 .current {
   background-image: linear-gradient(rgb(53, 53, 241), purple);
 }
+
+@media only screen and (max-width: 600px){
+  .header ul{
+    flex-direction: column;
+  }
+  .header li{
+    margin: 10px;
+  }
+  .header a{
+    display: block;
+  }
+}
+
 .logo{
-  width: 150px;
+  width: 120px;
   height: 100px;
   cursor: pointer;
   float: left;
@@ -137,6 +149,8 @@ a{
 }
 #contact{
   display: flex;
+  /*justify-content: center;*/
+  height: 130vh;
 }
 #information {
   background-color: rgb(144, 149, 179);
@@ -155,12 +169,6 @@ a{
 #contact h4{
   font-size: 1em;
   color: #7a4e7e;
-}
-.maps{
-  margin: 10px;
-  padding: 20px 0;
-  border: 1px solid grey;
-  display: block;
 }
 #information input[type="text"],
 #information input[type="email"],
@@ -183,7 +191,24 @@ a{
   padding: 10px;
   border-radius: 10px;
 }
+.maps{
+  margin: 0;
+  padding: 0;
+  border: 1px solid grey;
+}
+p{
+  font-weight: bold;
+}
+.address{
+  margin: 10px;
+  padding: 20px 20px;
+  border: 1px solid grey;
+  
+}
 footer{
+  position: relative;
+  width: 100%;
+  font-weight: bolder;
   margin:0;
   background: rgb(190, 201, 223);
   text-align: center;

@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap');
 body{
     margin: 0;
     width: 100%;
 }
 .header{
-    margin: 0;
+    display: flex;
+   background-color: rgb(126, 126, 245);
+  display: flex;
+  /*padding: 16px;*/
+  font-family: sans-serif;
+  color: white;
+    /*margin: 0;
     width: 100%;
     background:rgb(126, 126, 245) ;
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;*/
 }
 .logo{
     width: 100px;
@@ -23,7 +30,8 @@ h3{
 }
 nav{
     margin: 0;
-    text-align: end
+    text-align: end;
+
 }
 nav ul{
     margin: 0;
