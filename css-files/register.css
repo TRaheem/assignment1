@@ -118,6 +118,11 @@ span{
     box-sizing: border-box;
     font-size: 14px;
 }
+label.required ::after{
+    content: '*';
+    color: red;
+}
+
 #register button{
     font-family: sans-serif;
     text-transform: uppercase;

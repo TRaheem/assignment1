@@ -115,6 +115,11 @@ nav a:active {
   font-size: 14px;
 }
 
+label.required ::after{
+  content: '*';
+  color: red;
+}
+
 #login button{
   font-family: sans-serif;
   text-transform: uppercase;
