@@ -140,7 +140,7 @@ p{
 }
 
 .gallery img{
-  width: 383px;
+  width: 350px;
   height: 300px;
   transition: 1s;
   padding: 15px;
@@ -151,12 +151,7 @@ p{
 }
 
 /* Define name of each gallery picture*/
-.photo_name{
-  width: 100%;
-  bottom: 20px;
-  text-align: center;
-  font-weight: bolder;
-}
+
 
 /* Style Contact form and Other contact information*/
 #contact{
@@ -190,6 +185,7 @@ label.required ::after{
   content: '*';
   color: red;
 }
+
 
 #information input[type="text"],
 #information input[type="email"],
