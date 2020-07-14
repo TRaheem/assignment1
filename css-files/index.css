@@ -232,7 +232,7 @@ footer{
 }
 
 /* Make site responsive*/
-@media only screen and (max-width: 600px){
+/*@media only screen and (max-width: 600px){
   nav ul, #contact{
     flex-direction: column;
   }

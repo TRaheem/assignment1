@@ -45,11 +45,11 @@ nav{
     text-align: end;
 }
 /*hide checkbox input element*/
-#menu-toggle{
+/*#menu-toggle{
     opacity: 0;
 }
 /* Show menu when menu-toggle checkbox is checked, use ~*/
-#menu-toggle:checked ~ #menu{
+/*#menu-toggle:checked ~ #menu{
     display: flex;
 }
 
@@ -63,16 +63,17 @@ nav{
         height: 3px;
         margin: 4px;
         border-radius: 3px;
-
-    }
-}
-
+}*/
 
 nav ul{
+    display: none;
     margin: 0;
     padding: 0;
     list-style-type: none;
 
+}
+.visible{
+    display: block;
 }
 nav li{
     display: inline-block;
@@ -98,31 +99,21 @@ nav a:active {
 .current {
     background-image: linear-gradient(rgb(53, 53, 241), purple);
 }
-@media only screen and (max-width: 600px) {
-    .header, .header ul{
-      flex-direction: column;
+@media (orientation: landscape) {
+    nav ul{
+      display: flex;
     }
-    .header ul{
-        margin-left: 0;
-        display: flex;
-        flex-direction: row;
+   nav ul li{
+        flex:auto;
     }  
-   }
-/*checkbox toggle will hide when breakpoint is beyond mobile*/
-#menu-toggle, #mobile-menu-label{
-    display: none;
-}
-#mobile-menu-label{
-    padding: 10px;
-
-}
-
-
+    nav button{
+        display: none;
+    }
+  }
 
 
 
 main{
-    height: 100vh;
     background-image: url(background_image.jpg);
     background-size: cover;
     background-position: center;
@@ -134,7 +125,7 @@ span{
     background: #b895b9;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 #register input{
@@ -143,18 +134,22 @@ span{
     width: 100%;
     border: 10px;
     margin: 0 0 15px;
-    padding: 15px;
+    padding: 14px;
     box-sizing: border-box;
     font-size: 14px;
+}
+input type:invalid{
+    background-color: red;
 }
 label.required ::after{
     content: '*';
     color: red;
 }
 
-label.passwordlength{
+.passwordlength{
+    float: left;
     text-align: start;
-    margin-top: 0px;
+    padding-bottom: 15px;
 }
 
 #register button{
@@ -164,7 +159,7 @@ label.passwordlength{
     background: #d1b2b2;
     width: 100%;
     border: 0;
-    padding: 10px;
+    padding: 8px;
     color: #9c5a5a;
     font-size: 14px;
 }
