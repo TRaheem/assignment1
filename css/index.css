@@ -1,53 +1,129 @@
 /* Author: Titilope Raheem
-   Date: 8th July 2020
+   Date: 14th July 2020
    Course module: CPRG-210-XM1 - Wed Application Development
-   Assignment 1 - Travel Experts Agency Website*/
+   Assignment 2 - Travel Experts Agency Website*/
 
 /* Google font imported*/
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:wght@300&display=swap');
 
 /* Define font style and width*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body{
-  line-height: 1.2;
+  line-height: 1.7;
   font-size: 16px;
-  margin: 0;
+}
+
+/* Navigation styling and setup*/
+.nav-wrap {
   width: 100%;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: rgb(112, 112, 202);
 }
-
-/* Define navbar layout*/
-nav ul{
-  margin: 0;
-  background:rgb(126, 126, 245) ;
+  
+.navbar {
   display: flex;
-  justify-content: center;
-  padding: 16px;
-  color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  overflow: hidden;
+}
+  
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-self: space-around; 
+  align-items: flex-start;
 }
 
-nav li{
-  list-style-type: none;
-  margin-left: 5px;
-  padding: 4px;
-}
-
-/* Define Navbar link layout*/
-nav a{
-  color: white;
-  padding: 0.75em 1em;
+/* styling of navigation links*/
+.nav-link a {
+  color: rgb(54, 42, 42);
+  font-size: 1.2rem;
+  font-weight: 400;
   text-decoration: none;
   background-color: grey;
-  background-image: linear-gradient(lightgrey, grey);
-  border: 1px solid black;
-  text-align: center;
+  transition: color 0.3s ease-out;
+  padding: 5px;
+  margin: 5px;
+  display: inline block;
+  border: 1px solid rgb(110, 104, 104);
   border-radius: 5px;
 }
-
-nav a:hover {
+  
+/* Portrait menu */
+.menu-toggle .bar{
+  width: 30px;
+  height: 3px;
+  background-color: #3f3f3f;
+  margin: 5px auto;
+}
+  
+.nav-link a:hover {
   background-image: linear-gradient(grey, rgb(104, 69, 69));
 }
 
-nav a:active {
+.nav-link a:active {
   background-image: linear-gradient(lightblue, grey);
+}
+
+.current {
+  background-image: linear-gradient(rgb(64, 64, 190), purple);
+}
+
+/*toggle menu*/
+.menu-toggle {
+  justify-self: end;
+  margin-right: 10px;
+  display: none;
+}
+  
+.menu-toggle:hover{
+  cursor: pointer;
+}
+  
+/* Media Query */
+  
+@media only screen and (max-width: 720px) {   
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 55px);
+    transform: translate(-101%);
+    text-align: center;
+    overflow: hidden;
+  }
+    
+  .navbar li {
+    padding: 10px;
+  }
+    
+  .navbar li a {
+    font-size: 1rem;
+  }
+     
+  .menu-toggle, .bar {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+    
+  .portrait-nav {
+    transform: translate(0%)!important;
+  }
+      
 }
 
 /* stlye logo layout*/
@@ -62,7 +138,7 @@ nav a:active {
 
 /* Style hero section*/
 #Home{
-  background-image:url(background.jpg); 
+  background-image: url(https://picsum.photos/id/1051/200/300);
   height:100vh;
   background-position: center;
   background-size: cover;
@@ -133,6 +209,7 @@ p{
   font-family: "source sans pro", sans-serif;
 }
 
+/* gallery styling*/
 .gallery{
   margin: 50px 0px;
   display: flex;
@@ -149,8 +226,6 @@ p{
 .gallery img:hover{
   filter: grayscale(100%);
 }
-
-/* Define name of each gallery picture*/
 
 
 /* Style Contact form and Other contact information*/
@@ -229,14 +304,4 @@ footer{
   margin:0;
   background: rgb(190, 201, 223);
   text-align: center;
-}
-
-/* Make site responsive*/
-/*@media only screen and (max-width: 600px){
-  nav ul, #contact{
-    flex-direction: column;
-  }
-  nav a{
-    display: block;     
-  }
 }
