@@ -73,10 +73,6 @@ body{
   background-image: linear-gradient(lightblue, grey);
 }
 
-.current {
-  background-image: linear-gradient(rgb(64, 64, 190), purple);
-}
-
 /*toggle menu*/
 .menu-toggle {
   justify-self: end;

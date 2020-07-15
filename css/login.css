@@ -93,7 +93,7 @@ h3{
 .current {
   background-image: linear-gradient(rgb(64, 64, 190), purple);
 }
-
+/* toggle menu*/
 .menu-toggle {
   justify-self: end;
   margin-right: 10px;
