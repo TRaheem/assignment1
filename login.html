@@ -26,9 +26,9 @@
         </div>
         <ul class="nav no">
           <li class="nav-link"><a href="index.html">Home</a></li>
-          <li class="nav-link"><a href="index.html#Destination">Destinations</a></li>
+          <li class="nav-link"><a href="index.html#Destinations">Destinations</a></li>
           <li class="nav-link"><a href="index.html#contact">Contact Us</a></li>
-          <li class="nav-link"><a class="current"href="login.html">Login</a></li>
+          <li class="nav-link"><a class="current" href="login.html">Login</a></li>
           <li class="nav-link"><a href="register.html">Register</a></li>
         </ul>
     </nav>
@@ -36,21 +36,24 @@
   </header>
 
   <main>
-    <fieldset class="form">
+    <div class="form">
       <div id="login">
         <form action="https://formspree.io/xgennzer" method="POST">
+          <fieldset>
+          <legend></legend>
           <label class="required" >
-            <legend>Email </legend>
+            <span>Email </span>
             <input placeholder="Enter Email Address" type="email" required>
           </label>
           <label class="required" >
-            <legend>Password </legend>
+            <span>Password </span>
             <input placeholder="Enter Password" type="password" required>
           </label>
+          </fieldset>
           <button>Login</button>
         </form>
       </div>
-    </fieldset>
+    </div>
   </main>
 
   <footer>&copy; 2020 Titilope Raheem</footer>

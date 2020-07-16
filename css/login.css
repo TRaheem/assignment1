@@ -57,7 +57,6 @@ h3{
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-self: space-between; 
 }
   
 .nav-link a {
@@ -69,7 +68,6 @@ h3{
   transition: color 0.3s ease-out;
   padding: 5px;
   margin: 5px;
-  display: inline block;
   border: 1px solid rgb(110, 104, 104);
   border-radius: 5px;
 }
