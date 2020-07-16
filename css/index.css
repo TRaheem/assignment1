@@ -88,6 +88,10 @@ body{
   
 @media only screen and (max-width: 720px) {   
 
+  .nav-wrap{
+    display: flex;
+    flex-direction: column;
+  }
   .navbar ul {
     display: flex;
     flex-direction: column;
@@ -100,6 +104,7 @@ body{
     transform: translate(-101%);
     text-align: center;
     overflow: hidden;
+    transition: all 200ms ease-in-out;
   }
     
   .navbar li {
@@ -122,6 +127,14 @@ body{
       
 }
 
+/* Style hero section*/
+#Home{
+  background-image: url(https://picsum.photos/id/1051/200/300);
+  height:100vh;
+  background-position: center;
+  background-size: cover;
+}
+
 /* stlye logo layout*/
 .logo{
   width: 150px;
@@ -130,14 +143,6 @@ body{
   margin: 0;
   float: left;
   padding: 10px;
-}
-
-/* Style hero section*/
-#Home{
-  background-image: url(https://picsum.photos/id/1051/200/300);
-  height:100vh;
-  background-position: center;
-  background-size: cover;
 }
 
 .hero-section{
