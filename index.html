@@ -157,7 +157,7 @@
       imgList.forEach(function(item){
       console.log(item);
       // Our output variable (imgTemplate)
-      imgTemplate += `<img src="${item.source}" alt=${item.name}><div><h5>${item.description}</h5><a href=${item.website}><h4>${item.name}</h4></a></div>`
+      imgTemplate += `<img src="${item.source}" alt=${item.name}><div><h5>${item.description}</h5><a href=${item.website} target ="_blank">${item.name}</a></div>`
     });
 
     // Add HTML img string to gallery container
