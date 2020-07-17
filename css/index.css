@@ -122,7 +122,10 @@ body{
   .portrait-nav {
     transform: translate(0%)!important;
   }
-      
+
+  #contact {
+    flex-direction: column;
+  }   
 }
 
 /* Style hero section*/
