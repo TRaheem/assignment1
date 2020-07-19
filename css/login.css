@@ -20,7 +20,7 @@ body{
   height: 100vh;
 }
 
-/* Navigation styling and setup*/
+/* Navigation container styling and setup*/
 .head-wrap {
   width: 100%;
 }
@@ -32,11 +32,6 @@ body{
   top: 0;
   background-color: rgb(112, 112, 202);
 }
-  
-h3{
-  cursor: pointer;
-  margin-right: auto;
-}
 
 .navbar {
   display: flex;
@@ -45,7 +40,14 @@ h3{
   height: 50px;
   overflow: hidden;
 }
-  
+
+/* Company Title styling*/
+h3{
+  cursor: pointer;
+  margin-right: auto;
+}
+
+/* Company logo on navbar styling*/
 .navbar img {
   height: 50px;
   width: 100px;
@@ -53,12 +55,14 @@ h3{
   margin-left: 20px;
   cursor: pointer;
 }
-  
+
+/* make the unordered list a flexbox*/
 .navbar ul {
   list-style: none;
   display: flex;
 }
-  
+ 
+/* style navigation links and give background color*/
 .nav-link a {
   color: rgb(54, 42, 42);
   font-size: 1.2rem;
@@ -71,8 +75,23 @@ h3{
   border: 1px solid rgb(110, 104, 104);
   border-radius: 5px;
 }
-  
-/* Portrait menu */
+
+/* declare hover state for nav links*/
+.nav-link a:hover {
+  background-image: linear-gradient(grey, rgb(104, 69, 69));
+}
+
+/* declare active state for nav links*/
+.nav-link a:active {
+  background-image: linear-gradient(lightblue, grey);
+}
+
+/* declare current page state for nav links*/
+.current {
+  background-image: linear-gradient(rgb(64, 64, 190), purple);
+}  
+
+/* menu view */
 .menu-toggle .bar{
   width: 30px;
   height: 3px;
@@ -80,30 +99,19 @@ h3{
   margin: 5px auto;
 }
   
-.nav-link a:hover {
-  background-image: linear-gradient(grey, rgb(104, 69, 69));
-}
-
-.nav-link a:active {
-  background-image: linear-gradient(lightblue, grey);
-}
-
-.current {
-  background-image: linear-gradient(rgb(64, 64, 190), purple);
-}
-/* toggle menu*/
+/* toggle menu */
 .menu-toggle {
   justify-self: end;
   margin-right: 10px;
   display: none;
 }
-  
+ 
+/* declare hover state for hamburger menu */
 .menu-toggle:hover{
   cursor: pointer;
 }
   
-/* Media Query for landscape*/
-  
+/* Media Query for Portrait menu view */
 @media only screen and (max-width: 720px) {   
 
   .navbar ul {
@@ -140,7 +148,7 @@ h3{
       
 }
 
-/*Style login form*/
+/*Style login form and give background*/
 .form{
   width: 100%;
   height: 88vh;
@@ -169,11 +177,18 @@ h3{
   font-size: 14px;
 }
 
+/* add a red asterisk to show user it is required*/
 label.required ::after{
   content: '*';
   color: red;
 }
 
+/* red outline when invalid */
+input:invalid{
+  border: solid red;
+}
+
+/* style login button */
 #login button{
   font-family: sans-serif;
   text-transform: uppercase;
@@ -186,6 +201,7 @@ label.required ::after{
   font-size: 14px;
 }
 
+/* declare hover state for login button */
 #login button:hover{
   background-image: linear-gradient(white, black);
 }  
