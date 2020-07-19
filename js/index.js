@@ -1,9 +1,13 @@
-//hamburger menu.This line of code runs when the bar is clicked
+//hamburger menu.
+
+//This line of code runs when the bar is clicked
 $('.menu-toggle').click(function(){
   $(".nav").toggleClass("portrait-nav");
   $(this).toggleClass("is-active");
 });
-  
+ 
+// javascript for gallery section
+
 // object definition.
 const imgList = [{id: 'one', website: 'https://www.britannica.com/place/South-America', name: 'South America', source: 'images/des1_small.jpg', description: '<br>Argentine Patagonia is a true treat<br>for all travelers, not just those with<br> a penchant for adventure. From its<br> diverse wildlife to its majestic<br> mountains and jaw-dropping glaciers,<br>nature is at its best.'},
 {id:'two', website: 'https://viewfinder.expedia.com/top-rated-vacation-destinations-in-north-america/', name: 'North America', source: 'images/des2_small.jpg', description: '<br>Wailea, apparently, is never the bridesmaid,<br> always the bride. Blessed with five stunning<br> crescent-shaped beaches, luxuriously stylish<br> resorts, & Ahihi-Kinau Natural Area Reserve,<br> this destination pampers all travelers’ senses<br> with world-class food, beautiful sights, fresh<br> ocean scents, and inviting weather.'}, 
@@ -22,7 +26,7 @@ const gallery = document.querySelector('.gallery');
 imgList.forEach(function(item){
   console.log(item);
   
-// Our output variable (imgTemplate)
+// output variable (imgTemplate)
 imgTemplate += `<img src="${item.source}" alt=${item.name}><div><h5>${item.description}</h5><a href=${item.website} target ="_blank">${item.name}</a></div>`
 });
 
