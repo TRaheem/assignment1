@@ -19,7 +19,7 @@ body{
   font-size: 16px;
 }
 
-/* Navigation styling and setup*/
+/* Navigation styling and setup */
 .nav-wrap {
   width: 100%;
   position: -webkit-sticky;
@@ -29,19 +29,19 @@ body{
   
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
   height: 50px;
   overflow: hidden;
 }
-  
+ 
+/* make the unordered list a flexbox */
 .navbar ul {
   list-style: none;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
-/* styling of navigation links*/
+/* styling of navigation links */
 .nav-link a {
   color: rgb(54, 42, 42);
   font-size: 1.2rem;
@@ -54,8 +54,18 @@ body{
   border: 1px solid rgb(110, 104, 104);
   border-radius: 5px;
 }
-  
-/* Portrait menu */
+ 
+/* declare hover state for nav links */
+.nav-link a:hover {
+  background-image: linear-gradient(grey, rgb(104, 69, 69));
+}
+
+/* declare active state for nav links*/
+.nav-link a:active {
+  background-image: linear-gradient(lightblue, pink);
+}
+
+/* menu view */
 .menu-toggle .bar{
   width: 30px;
   height: 3px;
@@ -63,30 +73,22 @@ body{
   margin: 5px auto;
 }
   
-.nav-link a:hover {
-  background-image: linear-gradient(grey, rgb(104, 69, 69));
-}
-
-.nav-link a:active {
-  background-image: linear-gradient(lightblue, grey);
-}
-
-/*toggle menu*/
+/*hamburger menu*/
 .menu-toggle {
   justify-self: end;
   margin-right: 10px;
   display: none;
 }
-  
+
+/* declare hover state for hamburger menu */
 .menu-toggle:hover{
   cursor: pointer;
 }
   
-/* Media Query */
-  
+/* Media Query for portrait menu view*/
 @media only screen and (max-width: 720px) {   
 
-  .nav-wrap{
+  .nav{
     display: flex;
     flex-direction: column;
   }
@@ -103,6 +105,7 @@ body{
     text-align: center;
     overflow: hidden;
     transition: all 200ms ease-in-out;
+    z-index: 2;
   }
     
   .navbar li {
@@ -125,56 +128,58 @@ body{
 
   #contact {
     flex-direction: column;
-  }   
+  } 
+   
 }
 
-/* Style hero section*/
-#Home{
-  background-image: url(https://picsum.photos/id/1051/200/300);
-  height:100vh;
+/* The hero image */
+.hero-section {
+  background-image: url("https://picsum.photos/id/1051/200/300");
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Position and center the image on all screens */
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
-/* stlye logo layout*/
-.logo{
-  width: 150px;
-  height: 120px;
-  cursor: pointer;
-  margin: 0;
-  float: left;
-  padding: 10px;
-}
-
-.hero-section{
+/* Style hero section text*/
+.hero-text {
   text-align: center;
   position: absolute;
-  margin-top:10px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(53, 46, 46);
 }
 
 h1{
   font-size: 3em;
-  font-family:"shadows into light", sans-serif;
-  text-align: center;
- }
-
-span{
-  color: rgb(105, 69, 48);
+  font-weight: bolder;
+  margin-bottom: 20px;
 }
 
 p{
-  margin: 20px;
-  font-family: "source sans pro", sans-serif;
-  font-size: 1.7em;
-  font-weight: 400;
-  text-align: center;
-  padding: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-.pagetitle a{
-  margin-top: 20px;
-  font-size: 1.3em;
-  font-family: "source sans pro", sans-serif;
+/* stlye companylogo layout*/
+.companylogo{
+  width: 150px;
+  height: 110px;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+}
+
+/* add a color to a word on the h1 text*/
+span{
+  color: rgb(105, 69, 48);
 }
 
 /* Style website goal - sign up here*/
@@ -184,53 +189,49 @@ p{
   padding: 10px;
   color: rgb(212, 35, 35);
   border: 2px solid black;
-  text-align: center;
   text-decoration: none;
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
-  float: inherit;
+  background-color: rgb(58, 82, 148);
 }
 
+/* declare a hover and active state for the button*/
 .web-goal:hover, .web-goal:active{
   background-image: linear-gradient(white, black);
   color: #000;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
-/* Style Destination and Gallery*/
-#Destinations{
-  text-align: center;
-  font-weight: bolder;
-  background-color: rgb(161, 125, 125);
-  margin-top: 20px;
-  padding: 10px;
-}
-
+/* destination header styling and background color*/
 #Destinations h2{
   text-align: center;
   margin-top: 30px;
   font-family: "source sans pro", sans-serif;
+  background-color: rgb(112, 112, 202);
+  padding: 15px;
+  font-weight: bolder;
 }
 
-/* gallery styling*/
+/* make gallery a flexbox*/
 .gallery{
-  margin: 50px 0px;
+  margin: 40px 40px;
   display: flex;
   flex-wrap: wrap;
 }
 
+/* gallery image styling*/
 .gallery img{
-  width: 350px;
+  width: 300px;
   height: 300px;
   transition: 1s;
   padding: 15px;
 }
 
+/* declare hover state*/
 .gallery img:hover{
   filter: grayscale(100%);
 }
 
-
-/* Style Contact form and Other contact information*/
+/* make the container for contact a flexbox */
 #contact{
   display: flex;
   justify-content: space-around;
@@ -238,6 +239,7 @@ p{
 
 }
 
+/* style contact us form */
 #information {
   background-color: rgb(144, 149, 179);
   margin: 10px;
@@ -258,11 +260,13 @@ p{
   color: #7a4e7e;
 }
 
+/* let users know the field is required*/
 label.required ::after{
   content: '*';
   color: red;
 }
 
+/* style input fields on the contact form*/
 
 #information input[type="text"],
 #information input[type="email"],
@@ -277,6 +281,7 @@ label.required ::after{
   padding: 20px;
 }
 
+/* style submit button*/
 #information button[type="submit"] {
   cursor: pointer;
   width: 30%;
@@ -298,7 +303,7 @@ p{
   border: 1px solid grey;
 }
 
-/* Style footer*/
+/* Style footer section */
 footer{
   bottom: 0;
   width: 100%;
